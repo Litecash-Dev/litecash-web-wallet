@@ -1,0 +1,30 @@
+/* The emerging W3C standard
+  that is currently Firefox-only */
+// * {
+//   scrollbar-width: thin;
+//   scrollbar-color: #ccc $branding_ocean-blue;
+// }
+
+/* Works on Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+  overflow-y: auto;
+}
+*::-webkit-scrollbar-track {
+  background: $branding-dark-blue-lighter;
+}
+*::-webkit-scrollbar-thumb {
+  background-color:  $branding-dark-blue;
+  border-radius: 0;
+  border: 1px solid #999;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge add Firefox */
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}

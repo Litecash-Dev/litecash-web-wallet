@@ -1,0 +1,15 @@
+@import "./variables.scss";
+
+:export {
+  @each $key, $value in $light-colors {
+    light_#{unquote($key)}: $value;
+  }
+}
+
+:export {
+  @each $key, $value in $dark-colors {
+    dark_#{unquote($key)}: $value;
+  }
+}
+
+// it doesn't appear that :export can export map objects, only single key:value pairs

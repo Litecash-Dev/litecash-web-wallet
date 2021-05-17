@@ -1,0 +1,67 @@
+// This sass file is automatically import into Vuetify
+// Compilation with sass is VERY SLOW! Use this for global css and stick to component css in the vue files
+
+$brand-colors: (
+  "dark-blue": #02253C,
+  "dark-blue-lighter": #032E49,
+  "bright-blue": #0BCCF7,
+  "bright-green": #00F8D4,
+  "bright-pink-purple": #DA68F5,
+);
+
+$branding-dark-blue: map-get($brand-colors, "dark-blue");
+$branding-dark-blue-lighter: map-get($brand-colors, "dark-blue-lighter");
+$branding-bright-blue: map-get($brand-colors, "bright-blue");
+$branding-bright-green: map-get($brand-colors, "bright-green");
+$branding-bright-pink-purple: map-get($brand-colors, "bright-pink-purple");
+
+/*9caa0c*/
+$light-colors: (
+  "dark-blue": map-get($brand-colors, "dark-blue"),
+  "dark-blue-lighter": map-get($brand-colors, "dark-blue-lighter"),
+  "bright-blue": map-get($brand-colors, "bright-blue"),
+  "bright-green": map-get($brand-colors, "bright-green"),
+  "bright-pink-purple": map-get($brand-colors, "bright-pink-purple"),
+  primary: map-get($brand-colors, "bright-green"),
+  secondary: #424242,
+  accent: #82B1FF,
+  error: #FF5252,
+  info: #2196F3,
+  success: #4CAF50,
+  warning: #FFC107,
+  anchor: map-get($brand-colors, "bright-green"),
+);
+
+$dark-colors: (
+  "dark-blue": map-get($brand-colors, "dark-blue"),
+  "dark-blue-lighter": map-get($brand-colors, "dark-blue-lighter"),
+  "bright-blue": map-get($brand-colors, "bright-blue"),
+  "bright-green": map-get($brand-colors, "bright-green"),
+  "bright-pink-purple": map-get($brand-colors, "bright-pink-purple"),
+  primary: map-get($brand-colors, "bright-green"),
+  secondary: #424242,
+  accent: #82B1FF,
+  error: #FF5252,
+  info: #2196F3,
+  success: #4CAF50,
+  warning: #FFC107,
+  anchor: map-get($brand-colors, "bright-green"),
+);
+
+// Globals
+$body-font-family: 'GothamRounded-Medium', 'Work Sans', serif;
+// $btn-hover-opacity: .51;
+// $btn-active-opacity: 1;
+// $btn-focus-opacity: 1;
+// $btn-icon-font-size: 20px;
+
+$btn-font-sizes: (
+  'x-small': .625rem,
+  'small': .85rem,
+  'default': .875rem,
+  'large': .975rem,
+  'x-large': 1rem
+);
+$btn-border-radius: 15px; // change default button border radius https://vuetifyjs.com/en/customization/sass-variables/#variable-api
+
+@import "./_styles.scss";

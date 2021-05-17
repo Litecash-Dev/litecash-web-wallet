@@ -1,0 +1,20 @@
+body, html {
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: $branding-dark-blue;
+}
+body .theme--dark.v-application {
+  background-color: $branding-dark-blue;
+}
+
+body .v-application--wrap {
+  min-height: 70vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+.debug div[class*="col-"] {
+  border:solid 1px red;
+}

@@ -1,0 +1,10 @@
+@import '~vuetify/src/styles/styles.sass';
+
+// Change dark theme background
+// https://stackoverflow.com/questions/65061266/how-do-i-change-the-vuetify-theme-background-color
+$material-dark: map-merge(
+  $material-dark,
+  (
+    'background': rgb(130, 130, 130),
+  )
+);
