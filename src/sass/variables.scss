@@ -49,7 +49,9 @@ $dark-colors: (
 );
 
 // Globals
-$body-font-family: 'GothamRounded-Medium', 'Work Sans', serif;
+$body-font-family: 'Raleway', sans-serif;
+// $border-radius-root: 6px;
+// $font-size-root: 11px;
 // $btn-hover-opacity: .51;
 // $btn-active-opacity: 1;
 // $btn-focus-opacity: 1;
@@ -62,6 +64,6 @@ $btn-font-sizes: (
   'large': .975rem,
   'x-large': 1rem
 );
-$btn-border-radius: 15px; // change default button border radius https://vuetifyjs.com/en/customization/sass-variables/#variable-api
+$btn-border-radius: 25px; // change default button border radius https://vuetifyjs.com/en/customization/sass-variables/#variable-api
 
 @import "./_styles.scss";
