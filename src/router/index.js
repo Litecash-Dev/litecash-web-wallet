@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Wallet from '../views/Wallet.vue'
 
 Vue.use(VueRouter)
 
@@ -9,6 +10,12 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/wallet',
+    alias: '/dashboard',
+    name: 'Wallet',
+    component: Wallet
   },
   {
     path: '/about',
