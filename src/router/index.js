@@ -2,6 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Wallet from '../views/Wallet.vue'
+import Addresses from '../views/Addresses.vue'
+import Utxo from '../views/Utxo.vue'
+import Settings from '../views/Settings.vue'
 
 Vue.use(VueRouter)
 
@@ -16,6 +19,21 @@ const routes = [
     alias: '/dashboard',
     name: 'Wallet',
     component: Wallet
+  },
+  {
+    path: '/addresses',
+    name: 'Addresses',
+    component: Addresses
+  },
+  {
+    path: '/utxo',
+    name: 'Utxo',
+    component: Utxo
+  },
+  {
+    path: '/settings',
+    name: 'Settings',
+    component: Settings
   },
   {
     path: '/about',
