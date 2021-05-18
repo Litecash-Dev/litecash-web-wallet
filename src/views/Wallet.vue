@@ -3,7 +3,7 @@
     <div class="d-flex">
       <div>
         <h1>Wallet</h1>
-        <div class="online-status online-status--online">online</div>
+        <online-status />
       </div>
       <v-spacer></v-spacer>
       <v-btn width="115" color="bright-blue">
@@ -92,8 +92,13 @@
 </template>
 
 <script>
+  import OnlineStatus from '@/components/OnlineStatus'
+
   export default {
     name: 'Wallet',
+    components: {
+      OnlineStatus,
+    },
     data() {
       return {
         transactionHeaders: [

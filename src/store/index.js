@@ -6,6 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     balance: 0,
+    onlineStatus: 'online', // offline....
     addresses: [
       {
         datecreated: '2021-05-15T15:00:00',
@@ -69,6 +70,29 @@ export default new Vuex.Store({
         amount: 200
       }
     ],
+    utxo: [
+      {
+        amount: 99,
+        maturity: 49204,
+        status: 'available',
+        type: 'regular'
+      },
+      {
+        amount: 96,
+        maturity: 39204,
+        status: 'available',
+        type: 'regular'
+      },
+      {
+        amount: 86,
+        maturity: 29204,
+        status: 'available',
+        type: 'regular'
+      }
+    ],
+    settings: {
+      remoteNodeAddress: 'explorer.lite-cash.com:10000'
+    }
   },
   mutations: {
   },

@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <h1>Addresses</h1>
-    <div class="online-status online-status--online">online</div>
+    <online-status />
     <v-row class="my-4">
       <v-col xl="12" lg="12" md="12" sm="12" cols="12">
         <v-tabs
@@ -71,8 +71,13 @@
 </template>
 
 <script>
+  import OnlineStatus from '@/components/OnlineStatus'
+
   export default {
-    name: 'Wallet',
+    name: 'Addresses',
+    components: {
+      OnlineStatus,
+    },
     data() {
       return {
         addressHeaders: [
