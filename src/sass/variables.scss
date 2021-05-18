@@ -3,25 +3,31 @@
 
 $brand-colors: (
   "dark-blue": #02253C,
-  "dark-blue-lighter": #032E49,
+  "dark-blue-light1": #032E49,
+  "dark-blue-light2": #1C435B,
   "bright-blue": #0BCCF7,
   "bright-green": #00F8D4,
   "bright-pink-purple": #DA68F5,
+  "gray": #999,
 );
 
 $branding-dark-blue: map-get($brand-colors, "dark-blue");
-$branding-dark-blue-lighter: map-get($brand-colors, "dark-blue-lighter");
+$branding-dark-blue-light1: map-get($brand-colors, "dark-blue-light1");
+$branding-dark-blue-light2: map-get($brand-colors, "dark-blue-light2");
 $branding-bright-blue: map-get($brand-colors, "bright-blue");
 $branding-bright-green: map-get($brand-colors, "bright-green");
 $branding-bright-pink-purple: map-get($brand-colors, "bright-pink-purple");
+$branding-gray: map-get($brand-colors, "gray");
 
 /*9caa0c*/
 $light-colors: (
   "dark-blue": map-get($brand-colors, "dark-blue"),
-  "dark-blue-lighter": map-get($brand-colors, "dark-blue-lighter"),
+  "dark-blue-light1": map-get($brand-colors, "dark-blue-light1"),
+  "dark-blue-light2": map-get($brand-colors, "dark-blue-light2"),
   "bright-blue": map-get($brand-colors, "bright-blue"),
   "bright-green": map-get($brand-colors, "bright-green"),
   "bright-pink-purple": map-get($brand-colors, "bright-pink-purple"),
+  "gray": map-get($brand-colors, "gray"),
   primary: map-get($brand-colors, "bright-green"),
   secondary: #424242,
   accent: #82B1FF,
@@ -34,10 +40,12 @@ $light-colors: (
 
 $dark-colors: (
   "dark-blue": map-get($brand-colors, "dark-blue"),
-  "dark-blue-lighter": map-get($brand-colors, "dark-blue-lighter"),
+  "dark-blue-light1": map-get($brand-colors, "dark-blue-light1"),
+  "dark-blue-light2": map-get($brand-colors, "dark-blue-light2"),
   "bright-blue": map-get($brand-colors, "bright-blue"),
   "bright-green": map-get($brand-colors, "bright-green"),
   "bright-pink-purple": map-get($brand-colors, "bright-pink-purple"),
+  "gray": map-get($brand-colors, "gray"),
   primary: map-get($brand-colors, "bright-green"),
   secondary: #424242,
   accent: #82B1FF,

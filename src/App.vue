@@ -19,49 +19,33 @@
       </div>
       <v-spacer></v-spacer>
       <template v-if="$vuetify.breakpoint.smAndDown">
-        <v-btn icon>
+        <v-btn to="/wallet" icon>
           <v-icon>mdi-wallet</v-icon>
         </v-btn>
-        <v-btn icon>
+        <v-btn to="/addresses" icon>
           <v-icon>mdi-clipboard-multiple-outline</v-icon>
         </v-btn>
-        <v-btn icon>
+        <v-btn to="/utxo" icon>
           <v-icon>mdi-swap-vertical</v-icon>
         </v-btn>
-        <v-btn icon>
+        <v-btn to="/settings" icon>
           <v-icon>mdi-cog</v-icon>
         </v-btn>
       </template>
       <template v-else>
-        <v-btn
-          href="https://github.com/vuetifyjs/vuetify/releases/latest"
-          target="_blank"
-          text
-        >
+        <v-btn to="/wallet" text>
           <v-icon>mdi-wallet</v-icon>
           <span class="ml-2">Wallet</span>
         </v-btn>
-        <v-btn
-          href="https://github.com/vuetifyjs/vuetify/releases/latest"
-          target="_blank"
-          text
-        >
+        <v-btn to="/addresses" text>
           <v-icon>mdi-clipboard-multiple-outline</v-icon>
           <span class="ml-2">Addresses</span>
         </v-btn>
-        <v-btn
-          href="https://github.com/vuetifyjs/vuetify/releases/latest"
-          target="_blank"
-          text
-        >
+        <v-btn to="/utxo" text>
           <v-icon>mdi-swap-vertical</v-icon>
           <span class="ml-2">UTXO</span>
         </v-btn>
-        <v-btn
-          href="https://github.com/vuetifyjs/vuetify/releases/latest"
-          target="_blank"
-          text
-        >
+        <v-btn to="/settings" text>
           <v-icon>mdi-cog</v-icon>
           <span class="ml-2">Settings</span>
         </v-btn>
