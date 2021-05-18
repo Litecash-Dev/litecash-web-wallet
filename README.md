@@ -1,5 +1,5 @@
 # litecash-web-wallet
-Web wallet interface for Litecash
+Web wallet interface for Litecash. Built with VueJS, requires Node (10+) to run.
 
 ## Project setup
 ```
