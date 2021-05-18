@@ -6,7 +6,7 @@
         <online-status />
       </div>
       <v-spacer></v-spacer>
-      <v-btn width="115" color="bright-blue">
+      <v-btn width="115" color="bright-blue" to="/wallet/receive">
         <v-icon small class="mr-2">mdi-arrow-down</v-icon>
         receive
       </v-btn>
@@ -21,7 +21,7 @@
           <v-card-title>Balance</v-card-title>
           <v-card-text>
             <div class="cash-amount display-1 bright-green--text mt-5">
-            10,000,000 <span>CASH</span>
+            {{ balance | formatNumber }} <span>CASH</span>
             </div>
           </v-card-text>
         </v-card>
@@ -93,6 +93,7 @@
 
 <script>
   import OnlineStatus from '@/components/OnlineStatus'
+  import { numberWithCommas } from '@/helpers.js'
 
   export default {
     name: 'Wallet',
@@ -120,6 +121,9 @@
     filters: {
       formatDatestamp (value) {
         return value.spit("T").join(" ")
+      },
+      formatNumber (num) {
+        return numberWithCommas(num)
       }
     },
     computed: {
@@ -128,6 +132,9 @@
           x.datestamp = x.datestamp.split("T").join(" ")
           return x
         })
+      },
+      balance () {
+        return this.$store.state.balance
       }
     },
   }
