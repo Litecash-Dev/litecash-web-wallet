@@ -1,4 +1,5 @@
-# vue
+# litecash-web-wallet
+Web wallet interface for Litecash
 
 ## Project setup
 ```
