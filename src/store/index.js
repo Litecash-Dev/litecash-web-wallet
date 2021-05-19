@@ -7,6 +7,11 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     balance: 10000000,
+    inProgress: {
+      receiving: 1,
+      sending: 0,
+      maturing: 0,
+    },
     onlineStatus: 'online', // offline....
     addresses: dummData.addresses,
     contacts: dummData.contacts,
@@ -39,6 +44,9 @@ export default new Vuex.Store({
     },
     SET_TRANSACTION_PASSWORD_PROMPT (state, bool = true) {
       state.settings.transactionPasswordPrompt = bool;
+    },
+    SET_ALL_SETTINGS (state, obj) {
+      state.settings = { ...obj }
     },
   },
   actions: {

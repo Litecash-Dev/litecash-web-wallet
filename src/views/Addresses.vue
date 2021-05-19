@@ -11,7 +11,14 @@
           <v-tab
             v-for="item in tabs"
             :key="item">
+            <template v-if="$vuetify.breakpoint.smAndDown">
+              <v-icon :title="item" v-if="item.toLowerCase().indexOf('active') > -1">mdi-bell-ring</v-icon>
+              <v-icon :title="item" v-else-if="item.toLowerCase().indexOf('expire') > -1">mdi-bell-cancel</v-icon>
+              <v-icon :title="item" v-else-if="item.toLowerCase().indexOf('contact') > -1">mdi-contacts</v-icon>
+            </template>
+            <template v-else>
             {{ item }}
+            </template>
           </v-tab>
         </v-tabs>
         <v-tabs-items v-model="tab" class="mt-5">

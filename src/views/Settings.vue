@@ -83,8 +83,8 @@
               <li>Don't forget to attach the logs or any screenshots</li>
             </ul>
             <v-btn outlined color="bright-blue" light class="mt-5">
-              <v-icon small class="mr-2">mdi-content-save</v-icon>
-              Save wallet logs
+              <v-icon small class="mr-2">mdi-magnify</v-icon>
+              View wallet logs
             </v-btn>
 
           </v-card-text>
@@ -98,12 +98,17 @@
           color="bright-blue"
           class="mr-5"
           :disabled="!settingsChanged"
-          light>Save changes</v-btn>
+          light>
+          <v-icon class="mr-2">mdi-content-save</v-icon>
+          Save changes</v-btn>
         <v-btn
           color="bright-blue"
           class="ml-5"
           :disabled="!settingsChanged"
-          light>Undo changes</v-btn>
+          @click="undoChanges"
+          light>
+          <v-icon class="mr-2">mdi-undo</v-icon>
+          Undo changes</v-btn>
       </v-col>
     </v-row>
   </v-container>
@@ -116,6 +121,7 @@
     name: 'Settings',
     data () {
       return {
+        settingsCopy: {},
         lockscreenDurationItems: [
           { value: 10, text: "10 minutes" },
           { value: 20, text: "20 minutes" },
@@ -187,7 +193,14 @@
     methods: {
       checkSettingsChanged () {
         this.settingsChanged = true
-      }
+      },
+      undoChanges () {
+        this.$store.commit('SET_ALL_SETTINGS', this.settingsCopy)
+      },
+    },
+    mounted () {
+      // console.log("mounted -> this.$store.state.settings", Object.keys(this.$store.state.settings).map(x => x))
+      // this.settingsCopy = Object.assign({}, ...this.$store.state.settings)
     },
   }
 </script>

@@ -36,7 +36,7 @@
           </v-card-text>
         </v-card>
       </v-col>
-      <v-col xl="4" lg="4" md="4" sm="12" cols="12">
+      <v-col xl="4" lg="4" md="4" sm="12" cols="12" :class="$vuetify.breakpoint.smAndDown ? 'text-center' : false">
         <img width="200" :src="require('@/assets/qr-code-dummy.png')" alt="">
       </v-col>
       <v-col xl="12" lg="12" md="12" sm="12" cols="12" class="text-center">

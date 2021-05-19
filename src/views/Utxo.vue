@@ -6,7 +6,7 @@
         <online-status />
       </div>
       <v-spacer></v-spacer>
-      <v-card class="dark-blue-light2 mr-2">
+      <v-card class="dark-blue-light2 ml-2 mr-2">
         <v-card-title>Blockchain Height</v-card-title>
         <v-card-text class="bright-blue--text" style="font-size:1.1rem">10563803</v-card-text>
       </v-card>

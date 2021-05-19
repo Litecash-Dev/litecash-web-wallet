@@ -10,7 +10,7 @@
         <v-icon small class="mr-2">mdi-arrow-down</v-icon>
         receive
       </v-btn>
-      <v-btn width="115" color="bright-pink-purple" class="ml-3">
+      <v-btn width="115" color="bright-pink-purple" class="ml-3" to="/wallet/send">
         <v-icon small class="mr-2">mdi-arrow-up</v-icon>
         send
       </v-btn>
@@ -33,17 +33,17 @@
             <div class="px-5 d-flex flex-row justify-space-between text-center">
               <div class="progress-block progress-block-receiving">
                 <div class="progress-title">Receiving</div>
-                <div class="progress-number">0</div>
+                <div class="progress-number">{{ receiving }}</div>
                 <v-icon large class="progress-icon">mdi-arrow-down-thin-circle-outline</v-icon>
               </div>
               <div class="progress-block progress-block-sending">
                 <div class="progress-title">Sending</div>
-                <div class="progress-number">0</div>
+                <div class="progress-number">{{ sending }}</div>
                 <v-icon large class="progress-icon">mdi-arrow-up-thin-circle-outline</v-icon>
               </div>
               <div class="progress-block progress-block-maturing">
                 <div class="progress-title">Maturing</div>
-                <div class="progress-number">0</div>
+                <div class="progress-number">{{ maturing }}</div>
                 <v-icon large class="progress-icon">mdi-lock-outline</v-icon>
               </div>
             </div>
@@ -135,6 +135,15 @@
       },
       balance () {
         return this.$store.state.balance
+      },
+      receiving () {
+        return this.$store.state.inProgress.receiving
+      },
+      sending () {
+        return this.$store.state.inProgress.sending
+      },
+      maturing () {
+        return this.$store.state.inProgress.maturing
       }
     },
   }
