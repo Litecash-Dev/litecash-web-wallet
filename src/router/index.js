@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Wallet from '../views/Wallet.vue'
 import Receive from '../views/Receive.vue'
+import Send from '../views/Send.vue'
 import Addresses from '../views/Addresses.vue'
 import Utxo from '../views/Utxo.vue'
 import Settings from '../views/Settings.vue'
@@ -25,6 +26,11 @@ const routes = [
     path: '/wallet/receive',
     name: 'Receive',
     component: Receive
+  },
+  {
+    path: '/wallet/send',
+    name: 'Send',
+    component: Send
   },
   {
     path: '/addresses',
